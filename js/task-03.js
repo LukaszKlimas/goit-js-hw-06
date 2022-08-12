@@ -19,6 +19,6 @@ images.forEach(index=>{
   alt="${index.alt}"
   /></li>`
 });
-console.log(galleryHtml);
+//console.log(galleryHtml);
 const gallery=document.querySelector(".gallery");
 gallery.insertAdjacentHTML("afterbegin", galleryHtml);
