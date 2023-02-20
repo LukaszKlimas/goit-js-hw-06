@@ -17,9 +17,12 @@ class Hero {
     this.hp=hp;
 	}
 }
-class Enemy extends Hero{
+class Enemy {
   constructor(name,strength,stamina,hp){
-   super(name,strength,stamina,hp);
+    this.name=name;
+    this.strength=strength;
+    this.stamina=stamina;
+    this.hp=hp
   }
 }
 function Random(min, max) {
@@ -39,5 +42,13 @@ const enemy2 =new Enemy(
 const enemy3 =new Enemy(
     "Pieczarka", 3, 3, 10
 );
+function DMG(kto,komu){
+    let dmg =Math.max(kto.strength -komu.stamina,1)
+   komu.hp-=dmg;
+   //console.log(dmg);
+   return dmg;
+}
 
+console.log (hero1,enemy1);
+DMG(hero1,enemy1);
 console.log (hero1,enemy1);
